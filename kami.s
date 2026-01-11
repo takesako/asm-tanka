@@ -1,3 +1,4 @@
+# macOS（x86_64 / Mach-O）
 .section __TEXT,__text
 .globl _main
 _main:
