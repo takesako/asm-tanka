@@ -247,3 +247,12 @@ exit(status) の第1引数は RDI です。ここで RDI は最初に fd とし�
 - macOS の syscall 番号 0x2000000 + n を
 - mov eax,2 → bswap で 0x02000000 を作って or で下位ビットを足す
 というトリックで生成しています。
+
+# 参考文献
+
+- [https://kozos.jp/asm-tanka/]
+- [https://www.amazon.co.jp/dp/4839949468/]
+- [https://www.slideshare.net/slideshow/asm-tankalten/43167759]
+- [https://www.slideshare.net/slideshow/assembler-haiku-takesako/34496587]
+- [https://tanakamura.github.io/pllp/docs/x8664_language.html]
+
