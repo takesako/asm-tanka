@@ -4,8 +4,9 @@
 ## macOS（x86_64 / Mach-O）作品
 macOS（x86_64 / Mach-O）で動く「アセンブラ短歌」の紹介です。
 
-[macos-x86_64.s](macos-x86_64.s)
+[kami.s](kami.s)
 ```
+# macOS（x86_64 / Mach-O）
 .section __TEXT,__text
 .globl _main
 _main:
@@ -34,12 +35,13 @@ _main:
 ### アセンブル
 このコードをアセンブルして機械語に翻訳するには以下のコマンドを実行します。
 ```
-arch -x86_64 clang macos-x86_64.s.s 
+arch -x86_64 clang kami.s
 ```
+Apple Silicon(ARM64)で動かす場合は、Rosettaの`arch -x86_64`コマンド経由で実行します。
 ### 実行方法
-エラーがなければ a.out 実行ファイルが生成されるのでそれを実行します。
+エラーがなければ a.out 実行ファイルが生成されますのでRosetta経由でIntelバイナリを実行します。
 ```
-./a.out
+arch -x86_64 ./a.out
 ```
 ### 実行結果
 ```
