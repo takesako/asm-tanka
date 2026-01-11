@@ -4,7 +4,9 @@
 ## macOS（x86_64 / Mach-O）作品
 macOS（x86_64 / Mach-O）で動く「アセンブラ短歌」の紹介です。
 
-[kami.s](kami.s)
+![アセンブラ短歌 in 神山](https://raw.githubusercontent.com/takesako/asm-tanka/refs/heads/main/kami.jpg)
+
+ソースコード: [kami.s](kami.s)
 ```
 # macOS（x86_64 / Mach-O）
 .section __TEXT,__text
@@ -32,12 +34,13 @@ _main:
     syscall
 
 ```
-### アセンブル
+### アセンブル方法
 このコードをアセンブルして機械語に翻訳するには以下のコマンドを実行します。
 ```
 arch -x86_64 clang kami.s
 ```
 Apple Silicon(ARM64)で動かす場合は、Rosettaの`arch -x86_64`コマンド経由で実行します。
+エントリポイントを指定したい場合clangに`-e _main`オプションを指定したり、標準Cライブラリを明示的にリンクしたくない場合は`-nostdlib`オプションを追加することもできます。
 ### 実行方法
 エラーがなければ a.out 実行ファイルが生成されますのでRosetta経由でIntelバイナリを実行します。
 ```
