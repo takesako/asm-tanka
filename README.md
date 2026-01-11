@@ -255,4 +255,4 @@ exit(status) の第1引数は RDI です。ここで RDI は最初に fd とし�
 - [https://www.slideshare.net/slideshow/asm-tankalten/43167759]
 - [https://www.slideshare.net/slideshow/assembler-haiku-takesako/34496587]
 - [https://tanakamura.github.io/pllp/docs/x8664_language.html]
-
+- [https://www.felixcloutier.com/x86/]
